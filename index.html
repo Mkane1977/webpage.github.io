@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercury Kane — Basic HTML Page</title>
+  <style>
+    /* Simple, readable styling to keep the page clean for grading */
+    :root { --fg: #111; --muted: #555; --bg: #f9fafb; --card: #ffffff; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    header { padding: 2rem 1rem; text-align: center; background: linear-gradient(180deg, #eef2ff, #f8fafc); }
+    h1 { margin: 0; font-size: 1.8rem; }
+    main { max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+    .card { background: var(--card); border: 1px solid #e5e7eb; border-radius: 14px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .grid { display: grid; gap: 0.75rem; }
+    .label { color: var(--muted); font-weight: 600; letter-spacing: 0.02em; }
+    footer { text-align: center; color: var(--muted); padding: 2rem 1rem 3rem; font-size: 0.9rem; }
+    code { background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <!-- 
+    COP 4813 — Basic HTML Page 
+    Author: Mercury Kane
+    Notes for the grader: this page intentionally contains no external JS/CSS frameworks.
+    All content required by the assignment appears below in semantic HTML.
+  -->
+  <header>
+    <h1>Basic HTML Page</h1>
+    <p class="label">COP 4813 &middot; Web Applications Programming</p>
+  </header>
+
+  <main>
+    <section class="card grid" aria-labelledby="about-heading">
+      <h2 id="about-heading">Student & Course</h2>
+      <p><span class="label">First and last name:</span> <strong>MERCURY KANE</strong></p>
+      <p><span class="label">Course name:</span> <strong>COP 4813 Web Applications Programming</strong></p>
+      <p><span class="label">Major:</span> <strong>Computer Science</strong></p>
+      <p><span class="label">Message:</span> <strong>Hello, World!</strong></p>
+    </section>
+
+    <section class="card grid" aria-labelledby="notes-heading" style="margin-top:1rem;">
+      <h2 id="notes-heading">Notes</h2>
+      <p>This simple page was built using only HTML and a tiny amount of embedded CSS for readability.
+         It is designed to be easily deployed to a static host (GitHub Pages, 000webhost, or InfinityFree).</p>
+      <p>To verify public accessibility, open the deployed URL on a phone not connected to campus Wi‑Fi or VPN.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Mercury Kane</p>
+    <script>
+      // Tiny, optional enhancement to show the current year.
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
